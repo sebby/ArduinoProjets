@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SearchIndexes Version="1.0">
+    <Documents>
+        <Document ID="3">
+            <Title>Arduino</Title>
+            <Text>Arduino Et Processing
+Découverte de la plateforme, et son utilisation dans des exemples interaction homme/machine</Text>
+        </Document>
+        <Document ID="8">
+            <Title>Wikipedia Arduino</Title>
+            <Text>
+Cette semaine, nous lançons Wikivoyage.
+Aidez-nous à créer un guide de voyage libre et gratuit que tout le monde peut améliorer.
+ 
+Arduino
+Arduino
+
+Développeur	Arduino Software
+Dernière version	1.0.2 (5 novembre 2012) [+/-]
+Environnements	Multi-plateforme
+Licence	GNU LGPL ou GNU GPL
+Site web	www.arduino.cc/fr
+modifier 
+Arduino est un circuit imprimé en matériel libre (dont les plans sont publiés en licence libre) sur lequel se trouve un microcontrôleur qui peut être programmé pour analyser et produire des signaux électriques, de manière à effectuer des tâches très diverses comme la domotique (le contrôle des appareils domestiques - éclairage, chauffage…), le pilotage d'un robot, etc. C'est une plateforme basée sur une interface entrée/sortie simple. Il était destiné à l'origine principalement mais pas exclusivement à la programmation multimédia interactive en vue de spectacle ou d'animations artistiques. C'est une partie de l'explication de la descendance de son interface de programmation de Processing, lui-même inspiré de l'environnement de programmation Wiring1.
+Arduino peut être utilisé pour construire des objets interactifs indépendants (prototypage rapide), ou bien peut être connecté à un ordinateur pour communiquer avec ses logiciels (ex. : Macromedia Flash, Processing, Max/MSP, Pure Data, SuperCollider). En 2011, les versions vendues sont pré-assemblées. Des informations sont fournies pour ceux qui souhaitent assembler l'Arduino eux-mêmes.
+Le projet Arduino a reçu un titre honorifique à l'Ars Electronica 2006, dans la catégorie Digital Communities.
+
+Sommaire  [masquer] 
+1 Description
+1.1 Matériel
+1.2 Logiciel
+2 Plateforme
+2.1 Matériel officiel
+2.2 Matériels et logiciels dérivés
+3 Matériel libre et logiciel libre
+3.1 Restrictions du nom Arduino
+4 L'équipe de développement
+5 Notes et références
+6 Annexes
+6.1 Articles connexes
+6.2 Liens externes
+Description[modifier]
+
+Matériel[modifier]
+Un module Arduino est généralement construit autour d'un microcontrôleur Atmel AVR (ATmega328 ou ATmega2560 pour les versions récentes, ATmega168 ou ATmega8 pour les plus anciennes), et de composants complémentaires qui facilitent la programmation et l'interfaçage avec d'autres circuits. Chaque module possède au moins un régulateur linéaire 5V et un oscillateur à quartz 16 MHz (ou un résonateur céramique dans certains modèles).
+Le microcontrôleur est pré-programmé avec un bootloader de façon à ce qu'un programmateur dédié ne soit pas nécessaire.
+Les modules sont programmés au travers d'une connexion série RS-232, mais les connexions permettant cette programmation diffèrent selon les modèles. Les premiers Arduino possédaient un port série, puis l'USB est apparu sur les modèles Diecimila, tandis que certains modules destinés à une utilisation portable se sont affranchis de l'interface de programmation, relocalisée sur un module USB-série dédié (sous forme de carte ou de câble).
+L'Arduino utilise la plupart des entrées/sorties du microcontrôleur pour l'interfaçage avec les autres circuits. Le modèle Diecimila par exemple, possède 14 entrées/sorties numériques, dont 6 peuvent produire des signaux PWM, et 6 entrées analogiques. Les connexions sont établies au travers de connecteurs femelle HE14 situés sur le dessus de la carte, les modules d'extension venant s'empiler sur l'Arduino. Plusieurs sortes d'extensions sont disponibles dans le commerce.
+Les modules non officiels « BoArduino » et « Barebones », compatibles avec la technologie Arduino, utilisent des connecteurs mâle pour une utilisation aisée avec des plaques de test.
+Logiciel[modifier]
+Le logiciel de programmation des modules Arduino est une application Java, libre et multi-plateformes, servant d'éditeur de code et de compilateur, et qui peut transférer le firmware et le programme au travers de la liaison série (RS-232, Bluetooth ou USB selon le module). Il est également possible de se passer de l'interface Arduino, et de compiler les programmes via l'interface en ligne de commande2.
+Le langage de programmation utilisé est le C++, compilé avec avr-g++ 3, et lié à la bibliothèque de développement Arduino, permettant l'utilisation de la carte et de ses entrées/sorties. La mise en place de ce langage standard rend aisé le développement de programmes sur les plates-formes Arduino, à toute personne maitrisant le C ou le C++.
+Plateforme[modifier]
+
+Matériel officiel[modifier]
+
+
+Un Arduino Diecimila.
+Les modules d'origine des différentes versions de l'Arduino sont fabriqués par la société italienne Smart Projects. Quelques-unes des cartes de marque Arduino ont été conçues par la société américaine SparkFun Electronics (en).
+Treize versions des cartes de type Arduino ont été produites et vendues dans le commerce à ce jour dans l'ordre chronologique ci-dessous :
+Serial Arduino, programmé avec une connexion série par connecteur DB9 et utilisant un ATmega8.
+Arduino Extreme, programmable via une connexion USB et utilisant un ATmega8.
+Arduino Mini, une version miniature de l'Arduino utilisant un ATmega168 de type CMS.
+Arduino Nano, une version encore plus petite de l'Arduino alimenté par USB et utilisant un ATmega168 de type CMS (Atmega328 pour la nouvelle version).
+LilyPad Arduino, une conception de type minimaliste pour permettre une application portable utilisant un ATmega168 de type CMS.
+Arduino NG, programmable via une connexion USB et utilisant un ATmega8.
+Arduino NG plus, programmable via une connexion USB et utilisant un ATmega168.
+Arduino Bluetooth(BT), programmable via une connexion Bluetooth et utilisant un ATmega168.
+Arduino Diecimila, possède une interface USB et utilise un ATmega168 dans un boitier format DIL28. (16 ko flash, 1 ko SRAM, 0,5 ko EEPROM)
+Arduino Duemilanove (2009) utilise un Atmega168 et est alimenté en électricité par le connecteur USB ou une alimentation externe avec commutation automatique4. La nouvelle version5 est équipé d'un ATmega328 (32 ko de flash, 2 ko de SRAM, et 1 ko d'EEPROM).
+Arduino Mega est équipé d'un ATmega1280 de type CMS pour avoir des Entrées/Sorties supplémentaires et de la mémoire (128 ko flash, 8 ko SRAM, 4 ko EEPROM)6.
+Arduino Uno utilise un ATmega328 comme les derniers modèles de Duemilanove, mais alors que le Duemilanove utilisait une puce FTDI pour la programmation via un connecteur USB, le Uno utilise une puce ATmega8U2 programmé comme un convertisseur série7.
+Arduino Mega2560 est équipé d'un ATmega2560 de type CMS, augmentant la mémoire totale disponible à 256 kio. Il est équipé aussi de la nouvelle puce USB ATmega8U28.
+Arduino Ethernet est une carte Arduino UNO intégrant un chip Wiznet W5100 pour rajouter la connectivité Ethernet intégré9.
+Arduino Leonardo est une version bas coût de l'Arduino UNO à base d'un ATmega32U4.
+Arduino DUE est une évolution de l'Arduino Mega2560 avec un micro-contrôleur 32 bits Atmel SAM3U (ARM 32 bits Cortex-M3).
+Arduino	Processeur	Flash
+KiB	EEPROM
+KiB	SRAM
+KiB	Broches
+d'E/S numériques	...avec
+PWM	Broches
+d'entrée analogique	Type d'interface USB	Dimensions
+pouces	Dimensions
+mm
+Diecimila	ATmega168	16	0,5	1	14	6	6	FTDI	2,7" x 2,1"	68,6 mm x 53,3 mm
+Duemilanove	ATmega168/328P	16/32	0,5/1	1/2	14	6	6	FTDI	2,7" x 2,1"	68,6 mm x 53,3 mm
+Uno	ATmega328P	32	1	2	14	6	6	ATmega8U2	2,7" x 2,1"	68,6 mm x 53,3 mm
+Leonardo	ATmega32U4	32	1	2,5	14	6	6	ATmega32U4	2,7" x 2,1"	68,6 mm x 53,3 mm
+Mega	ATmega1280	128	4	8	54	14	16	FTDI	4" x 2,1"	101,6 mm x 53,3 mm
+Mega2560	ATmega2560	256	4	8	54	14	16	ATmega8U2	4" x 2,1"	101,6 mm x 53,3 mm
+Due	Atmel SAM3X8E	512	0	96	54	12	12	SAM3X8E (USB Host), ATmega16u2 (programmation)	4" x 2,1"	101,6 mm x 53,3 mm
+Fio	ATmega328P	32	1	2	14	6	8	None	1,6" x 1,1"	40,6 mm x 27,9 mm
+Nano	ATmega168 or ATmega328	16/32	0,5/1	1/2	14	6	8	FTDI	1,70" x 0,73"	43 mm x 18 mm
+LilyPad	ATmega168V or ATmega328V	16	0,5	1	14	6	6	None	2" ø	50 mm ø
+Matériels et logiciels dérivés[modifier]
+Plusieurs logiciels et matériels compatibles Arduino (bien que non officiels) ont été produits commercialement par d'autres fabricants :
+Les kits Freeduino Bare Bones Board et Really Bare Bones Board compatibles Arduino, fabriqués et vendus par Modern Device Company.
+Le Freeduino Through-Hole, compatible Arduino, module évitant l'utilisation de composants CMS et destiné à une fabrication personnelle ; fabriqué et vendu par NKC Electronics (sous forme de kit).
+Le Boarduino, un clone peu cher du Diecimila, avec des connecteurs pour une utilisation sur plaque de test.
+Des versions Fundamental Logic en kit ou montées, le MaxSerial Freeduino compatible Arduino Diecimila, interface RS-232, alimentation 3.3V optionnelle sur la carte ; et le mini iDuino pour une utilisation sur plaque de test.
+Plusieurs logiciels compatibles Arduino (bien que non officiels) ont été développés pour faciliter la programmation des cartes Arduino. Bien que très différents les uns des autres, ils permettent une programmation sans utilisation du langage Arduino. On retrouve :
+La solution graphique Ardublock qui permet une programmation par assemblage de blocs fonctionnels. C’est un plug-in qui ajoute une interface graphique à celle d’Arduino.
+La solution graphique MiniBloq qui permet elle aussi une programmation par assemblage de blocs fonctionnels. C’est un plug-in qui ajoute une interface graphique à celle d’Arduino.
+Le pseudo-langage EDU qui permet une programmation avec un ensemble de mots clés simplifiés. C’est une librairie qui permet l'écriture d’un programme en français directement dans l'interface Arduino.
+Matériel libre et logiciel libre[modifier]
+
+Le design matériel de l'Arduino est distribué sous licence Creative Commons Attribution Share-Alike 2.5 et est disponible sur le site d'Arduino. Les schémas ainsi que les typons de circuits sont également disponibles. Le code source de l'environnement de programmation et les bibliothèques embarquées sont disponibles sous licence LGPL.
+Restrictions du nom Arduino[modifier]
+Bien que le design matériel et logiciel soit sous licence copyleft, les développeurs ont exprimé le désir que le nom Arduino et ses dérivés soient exclusivement réservés aux modules officiels, et qu'ils ne soient pas utilisés pour des projets non autorisés. La politique d'usage du nom Arduino insiste sur le fait que les projets officiels sont ouverts à la collaboration10.
+En réponse à cette restriction, des utilisateurs ont développé une cinquantaine de modules équivalents, nommés Freeduino, Sanguino, Seeduino, Uduino, Diduino, etc11. Ces modules, totalement compatibles avec le logiciel Arduino, et parfois avec les blasons12 Arduino, sont généralement moins chers[réf. souhaitée] que les cartes Arduino originales. La plupart offrent également des fonctions additionnelles.
+L'équipe de développement[modifier]
+
+Le cœur de l'équipe des développeurs du projet Arduino est composé de Massimo Banzi, David Cuartielles, Tom Igoe, Gianluca Martino, David Mellis et Nicholas Zambetti.
+Notes et références[modifier]
+
+(en) Cet article est partiellement ou en totalité issu de l’article de Wikipédia en anglais intitulé « Arduino » (voir la liste des auteurs)
+↑ Wiring [archive], un environnement de programmation et de prototypage de cartes électroniques
+↑ http://www.francoistessier.info/blog/2011/07/06/programmation-arduino-en-ligne-de-commande/ [archive]
+↑ http://arduino.cc/fr/Main/DebuterFAQ [archive]
+↑ Duemilanove [archive]
+↑ http://spiffie.org/know/arduino_328/use.shtml [archive]
+↑ ArduinoBoardMega [archive], Arduino. Consulté le 2009-03-26
+↑ Arduino Uno [archive], arduino.cc. Consulté le 2010-10-02
+↑ Mega2560 [archive]
+↑ Arduino Ethernet [archive]
+↑ Arduino - Policy [archive]
+↑ Freeduino [archive]
+↑ Les blasons appelés souvent « shields » dans le commerce sont des modules contenant d'autres fonctions ou bien des interfaces.
+Annexes[modifier]
+
+Articles connexes[modifier]
+Sur les autres projets Wikimedia :
+Arduino, sur Wikimedia Commons
+(fr) Fritzing : le logiciel de création de circuit imprimés
+Raspberry Pi
+Liens externes[modifier]
+(fr) Site officiel
+(fr) Référence Arduino français
+(fr) Arduino sur Semageek.com (Un site en français avec de nombreux montages à base d'Arduino)
+(fr) Manuel d'initiation à Arduino
+(en) RTOS for Arduino Liste de systèmes d'exploitation temps réel pour Arduino
+
+ Portail des logiciels libres  Portail de l’informatique
+Catégorie : Matériel informatique libre | [+]
+Menu de navigation
+Créer un compteConnexionArticleDiscussionLireModifierAfficher l'historique
+
+Accueil
+Portails thématiques
+Index alphabétique
+Article au hasard
+Contacter Wikipédia
+Contribuer
+Premiers pas
+Aide
+Communauté
+Modifications récentes
+Faire un don
+Imprimer / exporter
+Boîte à outils
+Autres langues
+العربية
+Català
+Česky
+Deutsch
+Ελληνικά
+English
+Español
+Eesti
+Suomi
+Galego
+עברית
+Magyar
+Bahasa Indonesia
+Íslenska
+Italiano
+日本語
+한국어
+Nederlands
+Norsk (bokmål)‎
+Polski
+Português
+Русский
+Simple English
+Shqip
+Српски / srpski
+Svenska
+Türkçe
+Українська
+中文
+Dernière modification de cette page le 12 janvier 2013 à 01:01.
+Droit d'auteur : les textes sont disponibles sous licence Creative Commons paternité partage à l’identique ; d’autres conditions peuvent s’appliquer. Voyez les conditions d’utilisation pour plus de détails, ainsi que les crédits graphiques. En cas de réutilisation des textes de cette page, voyez comment citer les auteurs et mentionner la licence.
+Wikipedia® est une marque déposée de la Wikimedia Foundation, Inc., organisation de bienfaisance régie par le paragraphe 501(c)(3) du code fiscal des États-Unis.
+Politique de confidentialitéÀ propos de WikipédiaAvertissementsVersion mobile 
+</Text>
+        </Document>
+        <Document ID="6">
+            <Title>Wikipédia Arduino</Title>
+            <Text>
+Cette semaine, nous lançons Wikivoyage.
+Aidez-nous à créer un guide de voyage libre et gratuit que tout le monde peut améliorer.
+ 
+Processing
+Processing
+
+Apparu en	2001
+Auteurs	Ben Fry et Casey Reas
+Système d'exploitation	Multi-plateforme
+Licence	GPL et LGPL
+Site web	www.processing.org
+modifier 
+Processing (autrefois orthographié Proce55ing) est un langage de programmation et un environnement de développement créé par Benjamin Fry et Casey Reas, deux artistes américains. Processing est le prolongement « multimédia » de Design by numbers, l'environnement de programmation graphique développé par John Maeda au Media Lab du Massachusetts Institute of Technology.
+Processing est tout particulièrement adapté à la création plastique et graphique interactive. Le logiciel fonctionne sur Macintosh, sous Windows et sous Linux, car il est basé sur la plate-forme Java — il permet d'ailleurs de programmer directement en langage Java.
+Processing est distribué sous GNU GPL.
+Les programmes réalisés avec Processing peuvent être lus par les navigateurs internet équipés du plug-in java, mais aussi sous forme d'applications indépendantes pour windows, linux ou mac (en réalité n'importe quelle machine disposant d'une Machine virtuelle Java).
+
+
+L'environnement de développement Processing.
+Sommaire  [masquer] 
+1 Philosophie
+2 Syntaxe
+3 Proce55ing
+4 Extensions et projets alternatifs
+5 Bibliographie
+6 Voir aussi
+7 Notes et références
+8 Liens externes
+Philosophie[modifier]
+
+Le principe majeur de Processing est la simplicité, dans la mise en œuvre des programmes comme dans la syntaxe du langage. Adapté à la création graphique, Processing réclame moins d'efforts que Java pour effectuer des tâches simples telles que la modification d'une animation à intervalle régulier (qui permet des créations animées). Ses fonctionnalités sont limitées aux besoins des créateurs d'images 2D et 3D générées par programmation mais peuvent être étendues, par le biais de modules externes, à la capture d'un flux video, à la génération et à la manipulation de son, à l'interfaçage des ports d'entrées-sorties, etc.
+Processing s'adresse aux artistes en « arts numériques » et aux graphistes, notamment dans le domaine du graphisme d'information et dans celui du graphisme génératif. Il permet d'élaborer des sketches.
+Syntaxe[modifier]
+
+On peut écrire le traditionnel Hello world de cette manière :
+et même ainsi, sans la moindre déclaration préliminaire :
+Cependant, la méthode suivante est sans doute plus typique du fonctionnement de Processing :
+Les gestionnaires setup() et draw() sont deux fonctions pré-définies très importantes dans processing. La première, setup(), est exécutée une seule fois au lancement du programme. La seconde, draw() est lancée à intervalle régulier, par défaut dix fois par seconde.
+Processing emploie un typage rigoureux et est sensible à la casse. La structure de ses fonctions de base (comparaisons, conditions, boucles, etc.) est familière pour les utilisateurs du C++ ou de Java.
+Par exemple, une condition s'évalue ainsi :
+et une boucle se construit de cette façon :
+Proce55ing[modifier]
+
+L'ancien nom de Processing, Proce55ing, a été forgé ainsi car le nom de domaine Processing.org était pris et le site officiel a d'abord dû exister à l'adresse Proce55ing.org. À présent, les auteurs de Processing disposent du nom de domaine Processing.org, ils n'utilisent plus l'ancienne forme du nom et en déconseillent l'usage. Cependant, de nombreuses personnes abrègent le nom en p5.
+Extensions et projets alternatifs[modifier]
+
+Le projet Arduino, qui se base sur Processing, comme leur « ancêtre », Wiring1, permettent la manipulation de circuits électroniques extérieurs pour interfacer des capteurs ou des appareils électroniques divers (servomoteurs, leds,...). Un autre environnement logiciel, Fritzing, a été conçu pour aider les utilisateurs au prototypage de matériel destiné à être utilisé avec Arduino et Processing. Le projet Mobile Processing, comme son nom l'indique, a l'ambition de porter Processing sur téléphones portables. Enfin, Processing.js est une implémentation JavaScript de Processing. Depuis sa version 1.5.1, Processing peut produire des applications pour plate-forme Android et accéder aux capteurs spécifiques aux dispositifs mobiles (accéléromètre, GPS, etc.). Depuis la version alpha de Processing 2.0, Processing pourra aussi exporter directement du contenu au format HTML5/Javascript.
+Bibliographie[modifier]
+
+Processing : le code informatique comme outil de création, par Jean-Michel Géridan et Jean-Noël Lafargue, éd. Pearson 2011 (ISBN 978-2744024535)
+Design génératif - Concevoir, programmer, visualiser, par Julia Laub, Hartmut Bohnacker, Benedikt Grob et Claudius Lazzeroni. éd. Pyramid. (ISBN 978-2350172156)
+Processing, ouvrage collectif libre en français / Flossmanuals
+Programming Interactivity, par Joshua Noble, O'Reilly, 2009
+Algorithms for Visual Design Using the Processing Language, par Kostas Terzidis, Wiley, 2009
+Pixels, Patterns, and Processing, par Daniel Shiffman, Morgan Kaufmann, 2008
+Processing: A Programming Handbook for Visual Designers and Artists, par Casey Reas et Ben Fry, MIT Press, 2007
+Visualizing Data, par Ben Fry, O'Reilly, 2007
+Processing: Creative Coding and Computational Art, par Ira Greenberg, Friends of Ed, 2007
+Voir aussi[modifier]
+
+Processing.js
+NodeBox (Processing-like modulaire, programmé en Python)
+Notes et références[modifier]
+
+↑ Wiring [archive], un environnement de programmation et de prototypage de cartes électroniques pour des sketches artistiques ou autres
+Liens externes[modifier]
+
+(fr) Manuel libre de Flossmanuals
+(fr) Tutoriel sur le Dernier blog.
+(en) Site officiel
+ Portail des logiciels libres
+Catégorie : Langage de programmation | [+]
+Menu de navigation
+Créer un compteConnexionArticleDiscussionLireModifier
+
+Accueil
+Portails thématiques
+Index alphabétique
+Article au hasard
+Contacter Wikipédia
+Contribuer
+Premiers pas
+Aide
+Communauté
+Modifications récentes
+Faire un don
+Imprimer / exporter
+Boîte à outils
+Autres langues
+العربية
+Català
+Deutsch
+Ελληνικά
+English
+Español
+Suomi
+Galego
+Italiano
+日本語
+한국어
+Nederlands
+Norsk (bokmål)‎
+Polski
+Português
+Русский
+中文
+Dernière modification de cette page le 3 janvier 2013 à 22:16.
+Droit d'auteur : les textes sont disponibles sous licence Creative Commons paternité partage à l’identique ; d’autres conditions peuvent s’appliquer. Voyez les conditions d’utilisation pour plus de détails, ainsi que les crédits graphiques. En cas de réutilisation des textes de cette page, voyez comment citer les auteurs et mentionner la licence.
+Wikipedia® est une marque déposée de la Wikimedia Foundation, Inc., organisation de bienfaisance régie par le paragraphe 501(c)(3) du code fiscal des États-Unis.
+Politique de confidentialitéÀ propos de WikipédiaAvertissementsVersion mobile 
+</Text>
+        </Document>
+        <Document ID="4">
+            <Title>Série de tutoriels de Jérémy Blum</Title>
+            <Text>Série de tutoriels de Jérémy Blum
+Jérémy propose une série de vidéos pour une prise de contact de l’Arduino.
+Il détaille la communication avec des capteurs, avec une application Processing, et avec des commandes sur des servos-moteurs par exemple.
+
+Tutorial 02 for Arduino; Buttons, PWM, and Functions
+http://www.youtube.com/watch?v=_LCCGFSMOr4</Text>
+        </Document>
+        <Document ID="9">
+            <Title>Tutorial</Title>
+            <Text>Tutoriel 03 de Jérémy sur les moteurs électriques.
+
+Il y présente la loi d’OHM.
+V = IR 
+
+
+
+Tutoriel 04 | Les entrées analogiques (Analog Input).
+Ne pas oublier d’utiliser les entrées de la carte Uno, sinon les données ne sont pas correctes (à la théorie).
+Dans ma trousse, je possède un capteur de lumière et un capteur de température.
+Dans ce tuto, on modifier une valeur qui est eenvoté vers le LED analogWrite(led,val)
+
+
+Tutoriel 06 | Serial Communication and Processing</Text>
+        </Document>
+        <Document ID="5">
+            <Title>Wikipédia Processing</Title>
+            <Text>
+Cette semaine, nous lançons Wikivoyage.
+Aidez-nous à créer un guide de voyage libre et gratuit que tout le monde peut améliorer.
+ 
+Processing
+Processing
+
+Apparu en	2001
+Auteurs	Ben Fry et Casey Reas
+Système d'exploitation	Multi-plateforme
+Licence	GPL et LGPL
+Site web	www.processing.org
+modifier 
+Processing (autrefois orthographié Proce55ing) est un langage de programmation et un environnement de développement créé par Benjamin Fry et Casey Reas, deux artistes américains. Processing est le prolongement « multimédia » de Design by numbers, l'environnement de programmation graphique développé par John Maeda au Media Lab du Massachusetts Institute of Technology.
+Processing est tout particulièrement adapté à la création plastique et graphique interactive. Le logiciel fonctionne sur Macintosh, sous Windows et sous Linux, car il est basé sur la plate-forme Java — il permet d'ailleurs de programmer directement en langage Java.
+Processing est distribué sous GNU GPL.
+Les programmes réalisés avec Processing peuvent être lus par les navigateurs internet équipés du plug-in java, mais aussi sous forme d'applications indépendantes pour windows, linux ou mac (en réalité n'importe quelle machine disposant d'une Machine virtuelle Java).
+
+
+L'environnement de développement Processing.
+Sommaire  [masquer] 
+1 Philosophie
+2 Syntaxe
+3 Proce55ing
+4 Extensions et projets alternatifs
+5 Bibliographie
+6 Voir aussi
+7 Notes et références
+8 Liens externes
+Philosophie[modifier]
+
+Le principe majeur de Processing est la simplicité, dans la mise en œuvre des programmes comme dans la syntaxe du langage. Adapté à la création graphique, Processing réclame moins d'efforts que Java pour effectuer des tâches simples telles que la modification d'une animation à intervalle régulier (qui permet des créations animées). Ses fonctionnalités sont limitées aux besoins des créateurs d'images 2D et 3D générées par programmation mais peuvent être étendues, par le biais de modules externes, à la capture d'un flux video, à la génération et à la manipulation de son, à l'interfaçage des ports d'entrées-sorties, etc.
+Processing s'adresse aux artistes en « arts numériques » et aux graphistes, notamment dans le domaine du graphisme d'information et dans celui du graphisme génératif. Il permet d'élaborer des sketches.
+Syntaxe[modifier]
+
+On peut écrire le traditionnel Hello world de cette manière :
+et même ainsi, sans la moindre déclaration préliminaire :
+Cependant, la méthode suivante est sans doute plus typique du fonctionnement de Processing :
+Les gestionnaires setup() et draw() sont deux fonctions pré-définies très importantes dans processing. La première, setup(), est exécutée une seule fois au lancement du programme. La seconde, draw() est lancée à intervalle régulier, par défaut dix fois par seconde.
+Processing emploie un typage rigoureux et est sensible à la casse. La structure de ses fonctions de base (comparaisons, conditions, boucles, etc.) est familière pour les utilisateurs du C++ ou de Java.
+Par exemple, une condition s'évalue ainsi :
+et une boucle se construit de cette façon :
+Proce55ing[modifier]
+
+L'ancien nom de Processing, Proce55ing, a été forgé ainsi car le nom de domaine Processing.org était pris et le site officiel a d'abord dû exister à l'adresse Proce55ing.org. À présent, les auteurs de Processing disposent du nom de domaine Processing.org, ils n'utilisent plus l'ancienne forme du nom et en déconseillent l'usage. Cependant, de nombreuses personnes abrègent le nom en p5.
+Extensions et projets alternatifs[modifier]
+
+Le projet Arduino, qui se base sur Processing, comme leur « ancêtre », Wiring1, permettent la manipulation de circuits électroniques extérieurs pour interfacer des capteurs ou des appareils électroniques divers (servomoteurs, leds,...). Un autre environnement logiciel, Fritzing, a été conçu pour aider les utilisateurs au prototypage de matériel destiné à être utilisé avec Arduino et Processing. Le projet Mobile Processing, comme son nom l'indique, a l'ambition de porter Processing sur téléphones portables. Enfin, Processing.js est une implémentation JavaScript de Processing. Depuis sa version 1.5.1, Processing peut produire des applications pour plate-forme Android et accéder aux capteurs spécifiques aux dispositifs mobiles (accéléromètre, GPS, etc.). Depuis la version alpha de Processing 2.0, Processing pourra aussi exporter directement du contenu au format HTML5/Javascript.
+Bibliographie[modifier]
+
+Processing : le code informatique comme outil de création, par Jean-Michel Géridan et Jean-Noël Lafargue, éd. Pearson 2011 (ISBN 978-2744024535)
+Design génératif - Concevoir, programmer, visualiser, par Julia Laub, Hartmut Bohnacker, Benedikt Grob et Claudius Lazzeroni. éd. Pyramid. (ISBN 978-2350172156)
+Processing, ouvrage collectif libre en français / Flossmanuals
+Programming Interactivity, par Joshua Noble, O'Reilly, 2009
+Algorithms for Visual Design Using the Processing Language, par Kostas Terzidis, Wiley, 2009
+Pixels, Patterns, and Processing, par Daniel Shiffman, Morgan Kaufmann, 2008
+Processing: A Programming Handbook for Visual Designers and Artists, par Casey Reas et Ben Fry, MIT Press, 2007
+Visualizing Data, par Ben Fry, O'Reilly, 2007
+Processing: Creative Coding and Computational Art, par Ira Greenberg, Friends of Ed, 2007
+Voir aussi[modifier]
+
+Processing.js
+NodeBox (Processing-like modulaire, programmé en Python)
+Notes et références[modifier]
+
+↑ Wiring [archive], un environnement de programmation et de prototypage de cartes électroniques pour des sketches artistiques ou autres
+Liens externes[modifier]
+
+(fr) Manuel libre de Flossmanuals
+(fr) Tutoriel sur le Dernier blog.
+(en) Site officiel
+ Portail des logiciels libres
+Catégorie : Langage de programmation | [+]
+Menu de navigation
+Créer un compteConnexionArticleDiscussionLireModifier
+
+Accueil
+Portails thématiques
+Index alphabétique
+Article au hasard
+Contacter Wikipédia
+Contribuer
+Premiers pas
+Aide
+Communauté
+Modifications récentes
+Faire un don
+Imprimer / exporter
+Boîte à outils
+Autres langues
+العربية
+Català
+Deutsch
+Ελληνικά
+English
+Español
+Suomi
+Galego
+Italiano
+日本語
+한국어
+Nederlands
+Norsk (bokmål)‎
+Polski
+Português
+Русский
+中文
+Dernière modification de cette page le 3 janvier 2013 à 22:16.
+Droit d'auteur : les textes sont disponibles sous licence Creative Commons paternité partage à l’identique ; d’autres conditions peuvent s’appliquer. Voyez les conditions d’utilisation pour plus de détails, ainsi que les crédits graphiques. En cas de réutilisation des textes de cette page, voyez comment citer les auteurs et mentionner la licence.
+Wikipedia® est une marque déposée de la Wikimedia Foundation, Inc., organisation de bienfaisance régie par le paragraphe 501(c)(3) du code fiscal des États-Unis.
+Politique de confidentialitéÀ propos de WikipédiaAvertissementsVersion mobile 
+</Text>
+        </Document>
+    </Documents>
+</SearchIndexes>
