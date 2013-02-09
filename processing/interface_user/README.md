@@ -28,3 +28,6 @@ Puis relancer Processing et regarder le menu *Examples/ContributedLibraries/Cont
 ## Librairie ControlP5 ##
 Regarder les exemples de Slider et Toogle (simulation d'un  interrupteur)
 
+
+![Capture avec le sketch Toggle](https://dl.dropbox.com/u/17091715/capture20130210.png)
+
