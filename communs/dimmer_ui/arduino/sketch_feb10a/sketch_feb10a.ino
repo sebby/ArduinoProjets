@@ -43,12 +43,9 @@ void loop() {
     brightness = Serial.read();
     // set the brightness of the LED:
     analogWrite(ledRougePin, brightness);
-    analogWrite(ledRougeBPin, brightness);
+    analogWrite(ledRougeBPin, 255-brightness);
      
   }
-  else{
-   digitalWrite(ledRougePin, 'LOW'); 
-      digitalWrite(ledRougeBPin, 'LOW'); 
-  }
+ 
 }
 

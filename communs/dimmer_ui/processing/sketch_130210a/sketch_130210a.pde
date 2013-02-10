@@ -50,4 +50,5 @@ void draw(){
   fill(sliderValue);
   rect(0,0,width,height);
   port.write(sliderValue);
+  
 }
